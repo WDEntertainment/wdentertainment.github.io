@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Idle Breakout HAXS</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./util.js"></script>
+    </head>
+    <body>
+        <div id="first">
+            <p>What would you do with your save code today?</p>
+            <select id="whatToDo">
+                <option value="mon">Money</option>
+                <option value="gold">Gold</option>
+                <option value="bb">BB</option>
+            </select><br><br>
+            <button id="conf3">Confirm</button>
+        </div>
+        <div id="second">
+            <p>Enter your save code:</p>
+            <textarea id="saveCode" cols="30" rows="10"></textarea><br><br>
+            <button id="conf1">Confirm</button>
+        </div>
+        <div id="third">
+            <p id="inputForStuff">[something]</p><br>
+            <input type="number" id="input"><br>
+            <button id="conf2">Confirm</button>
+        </div>
+        <div id="forth">
+            <p>Your save code is now:</p>
+            <textarea readonly id="output" cols="30" rows="10"></textarea>
+        </div>
+        <button id="download">Download the offline verison for haxs.</button>
+        <script src="script.js"></script>
+    </body>
+</html>
