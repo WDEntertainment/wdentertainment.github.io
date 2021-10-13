@@ -1,0 +1,14 @@
+body * {
+    outline: none;
+}
+
+p {
+    top: 0%;
+    bottom: 0%;
+}
+
+textarea {
+    top: 0%;
+    bottom: 0%;
+    resize: none;
+}
