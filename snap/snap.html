@@ -44,6 +44,9 @@
                 }
                 world = new WorldMorph(document.getElementById('world'));
                 new IDE_Morph().openIn(world);
+		var ide = world.children[0];
+		ide.flushBlocksCache("operators");
+		    ide.refreshPalette();
                 loop();
 			};
             function loop() {
