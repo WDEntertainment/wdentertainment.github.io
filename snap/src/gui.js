@@ -3750,6 +3750,7 @@ IDE_Morph.prototype.settingsMenu = function () {
         'Microphone resolution...',
         'microphoneMenu'
     );
+    menu.addLine();
     addPreference(
         'Add scenes',
         () => this.isAddingScenes = !this.isAddingScenes,
