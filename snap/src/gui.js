@@ -3750,26 +3750,6 @@ IDE_Morph.prototype.settingsMenu = function () {
         'Microphone resolution...',
         'microphoneMenu'
     );
-    menu.addLine();
-    addPreference(
-        'JavaScript extensions',
-        () => {
-            /*
-            if (!Process.prototype.enableJS) {
-                this.logout();
-            }
-            */
-            Process.prototype.enableJS = !Process.prototype.enableJS;
-            this.flushBlocksCache('operators');
-            this.refreshPalette();
-        },
-        Process.prototype.enableJS,
-        'uncheck to disable support for\nnative JavaScript functions',
-        'check to support\nnative JavaScript functions' /* +
-            '.\n' +
-            'NOTE: You will have to manually\n' +
-            'sign in again to access your account.' */
-    );
     addPreference(
         'Add scenes',
         () => this.isAddingScenes = !this.isAddingScenes,
