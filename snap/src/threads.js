@@ -582,6 +582,7 @@ function Process(topBlock, receiver, onComplete, yieldFirst) {
     this.lastYield =  Date.now();
     this.isFirstStep = true;
     this.isAtomic = false;
+    Process.prototype.enableJS = true;
     this.prompter = null;
     this.httpRequest = null;
     this.isPaused = false;
