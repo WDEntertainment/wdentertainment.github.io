@@ -49,18 +49,8 @@
 		ide.flushBlocksCache("operators");
 		    ide.refreshPalette();
 		    ide.refreshIDE();
-                setInterval(loop, 1);
-			};
-            function loop() {
-		    world.doOneCycle();
-	    }
-        </script>
-    </head>
-    <body style="margin: 0;">
-        <canvas id="world" tabindex="1" style="position: absolute;"></canvas>
-    </body>
-	<script>
-		const tURL = new URL(window.location.href);
+		    
+		    const tURL = new URL(window.location.href);
 		
 		if (tURL.searchParams.has("loadChat")) {
 			var req = new XMLHttpRequest();
@@ -73,5 +63,15 @@
 			}
 			req.send(null);
 		}
-	</script>
+		    
+                setInterval(loop, 1);
+			};
+            function loop() {
+		    world.doOneCycle();
+	    }
+        </script>
+    </head>
+    <body style="margin: 0;">
+        <canvas id="world" tabindex="1" style="position: absolute;"></canvas>
+    </body>
 </html>
