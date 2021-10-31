@@ -68,6 +68,7 @@
 			req.onreadystatechange = function() {
 				if (req.readyState == req.DONE) {
 					ide.loadProjectXML(encodeURIComponent(req.responseText));
+					console.log(req.responseText);
 				}
 			}
 			req.send(null);
