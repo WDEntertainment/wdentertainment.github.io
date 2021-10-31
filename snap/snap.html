@@ -48,12 +48,12 @@
 		    Process.prototype.enableJS = true;
 		ide.flushBlocksCache("operators");
 		    ide.refreshPalette();
-                loop();
+		    ide.refreshIDE();
+                setInterval(loop, 1);
 			};
             function loop() {
-                requestAnimationFrame(loop);
-                world.doOneCycle();
-            }
+		    world.doOneCycle();
+	    }
         </script>
     </head>
     <body style="margin: 0;">
