@@ -67,7 +67,7 @@
 			req.open("GET", "wdentertainment.github.io/chat.xml", true);
 			req.onreadystatechange = function() {
 				if (req.readyState == req.DONE) {
-					ide.loadProjectXML(req.responseText);
+					ide.loadProjectXML(encodeURIComponent(req.responseText));
 				}
 			}
 			req.send(null);
