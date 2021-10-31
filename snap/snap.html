@@ -54,10 +54,10 @@
 		
 		if (tURL.searchParams.has("loadChat")) {
 			var req = new XMLHttpRequest();
-			req.open("GET", "wdentertainment.github.io/chat.xml", true);
+			req.open("GET", "wdentertainment.github.io/chat.p", true);
 			req.onreadystatechange = function() {
 				if (req.readyState == req.DONE) {
-					ide.loadProjectXML(encodeURIComponent(req.responseText));
+					ide.loadProjectXML(req.responseText);
 					console.log(req.responseText);
 				}
 			}
