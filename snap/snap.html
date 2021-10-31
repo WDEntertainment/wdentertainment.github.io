@@ -37,38 +37,40 @@
         <script src="src/sha512.js?version=2019-06-27"></script>
         <script src="src/FileSaver.min.js?version=2019-06-27"></script>
         <script>
-            var world, ide;
-            window.onload = function () {
-                if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('sw.js');
-                }
-                world = new WorldMorph(document.getElementById('world'));
-                new IDE_Morph().openIn(world);
-		ide = world.children[0];
-		    Process.prototype.enableJS = true;
-		ide.flushBlocksCache("operators");
-		    ide.refreshPalette();
-		    ide.refreshIDE();
+            	var world, ide;
+            	window.onload = function () {
+                	if ('serviceWorker' in navigator) {
+                    		navigator.serviceWorker.register('sw.js');
+                	}
+               		world = new WorldMorph(document.getElementById('world'));
+                	new IDE_Morph().openIn(world);
+			ide = world.children[0];
+		    	Process.prototype.enableJS = true;
+			ide.flushBlocksCache("operators");
+		    	ide.refreshPalette();
+		    	ide.refreshIDE();
 		    
-		    const tURL = new URL(window.location.href);
+		    
+                	setInterval(loop, 1);
+	    	};
+		window.onloadend = function () {
+			const tURL = new URL(window.location.href);
 		
-		if (tURL.searchParams.has("loadChat")) {
-			var req = new XMLHttpRequest();
-			req.open("GET", "https://wdentertainment.github.io/chat.p", true);
-			req.onreadystatechange = function() {
-				if (req.readyState == req.DONE) {
-					ide.loadProjectXML(req.responseText);
-					console.log(req.responseText);
+			if (tURL.searchParams.has("loadChat")) {
+				var req = new XMLHttpRequest();
+				req.open("GET", "https://wdentertainment.github.io/chat.p", true);
+				req.onreadystatechange = function() {
+					if (req.readyState == req.DONE) {
+						ide.loadProjectXML(req.responseText);
+						console.log(req.responseText);
+					}
 				}
+				req.send(null);
 			}
-			req.send(null);
 		}
-		    
-                setInterval(loop, 1);
-			};
-            function loop() {
-		    world.doOneCycle();
-	    }
+            	function loop() {
+		    	world.doOneCycle();
+	    	}
         </script>
     </head>
     <body style="margin: 0;">
