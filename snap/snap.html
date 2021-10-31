@@ -59,4 +59,18 @@
     <body style="margin: 0;">
         <canvas id="world" tabindex="1" style="position: absolute;"></canvas>
     </body>
+	<script>
+		const tURL = new URL(window.location.href);
+		
+		if (tURL.searchParams.has("loadChat")) {
+			var req = new XMLHttpRequest();
+			req.open("GET", "wdentertainment.github.io/chat.xml", true);
+			req.onreadystatechange = function() {
+				if (req.readyState == req.DONE) {
+					ide.loadProjectXML(req.responseText);
+				}
+			}
+			req.send(null);
+		}
+	</script>
 </html>
