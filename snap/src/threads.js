@@ -3607,7 +3607,7 @@ Process.prototype.doAddGoogolFont = function(fontName) {
         fontLink = "https://fonts.googleapis.com/css?family=" + fontName.replaceAll(" ", "+");
     
     if (window.loadedFonts.includes(fontLink, 0)) {
-        throw new Error("Cannot load a font that has already been loaded!");
+        return;
     }
     fontStyle.setAttribute("href", fontLink);
     fontStyle.setAttribute("rel", "stylesheet");
