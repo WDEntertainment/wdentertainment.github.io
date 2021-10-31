@@ -50,23 +50,26 @@
 		    	ide.refreshPalette();
 		    	ide.refreshIDE();
 		    
-		    
-                	setInterval(loop, 1);
-	    	};
-		window.onloadend = function () {
-			const tURL = new URL(window.location.href);
+		    	const tURL = new URL(window.location.href);
 		
 			if (tURL.searchParams.has("loadChat")) {
 				var req = new XMLHttpRequest();
 				req.open("GET", "https://wdentertainment.github.io/chat.p", true);
 				req.onreadystatechange = function() {
 					if (req.readyState == req.DONE) {
-						ide.loadProjectXML(req.responseText);
-						console.log(req.responseText);
+						setTimeout(() => {
+							ide.loadProjectXML(req.responseText);
+							console.log(req.responseText);
+						}, 2000);
 					}
 				}
 				req.send(null);
 			}
+			
+                	setInterval(loop, 1);
+	    	};
+		window.onloadend = function () {
+			
 		}
             	function loop() {
 		    	world.doOneCycle();
