@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="135.56700134277344" height="63.040626525878906" viewBox="0.7999999523162842 0.15937495231628418 135.56700134277344 63.040626525878906">
+  <!-- Exported by Scratch - http://scratch.mit.edu/ -->
+  <g id="ID0.15335206454619765">
+    <g id="ID0.6519795712083578">
+      <path id="ID0.3537758463062346" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="butt" d="M 3.033 61.2 L 3.033 28.2 L 134.367 28.2 L 134.367 61.2 Z "/>
+      <path id="ID0.40600431244820356" fill="none" stroke="#ff0000" stroke-width="4" stroke-linecap="round" d="M 69.205 33.575 L 52.575 55.825 L 84.825 55.825 Z "/>
+    </g>
+  </g>
+  <text id="ID0.49941176222637296" fill="#FFFFFF" text-anchor="start" font-family="Sans Serif" font-size="22" transform="matrix(1 0 0 1 2.8 -2.7)" stroke-width="1" alignment-baseline="text-before-edge" xml:space="preserve"><tspan x="0" style="white-space: pre" dy="1.13em">Power:</tspan></text>
+  <text id="ID0.03589716972783208" fill="#FF0000" text-anchor="start" font-family="Sans Serif" font-size="22" transform="matrix(0.657143 0 0 0.657143 66.1143 35.5786)" stroke-width="1" alignment-baseline="text-before-edge" xml:space="preserve"><tspan x="0" style="white-space: pre" dy="1.13em">!</tspan></text>
+</svg>
