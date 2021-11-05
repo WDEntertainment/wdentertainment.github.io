@@ -39,6 +39,7 @@
         <script>
             	var world, ide;
             	window.onload = function () {
+			window.currentPenFont = "";
                 	if ('serviceWorker' in navigator) {
                     		navigator.serviceWorker.register('sw.js');
                 	}
